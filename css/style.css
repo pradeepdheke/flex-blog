@@ -1,0 +1,274 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.card {
+	width: minmax (300px, 100%);
+	/* min-width: 300px */
+	/* min-width: 100% */
+	min-height: 300px;
+	background: white;
+	margin: 10px 5px;
+
+	border-radius: 5px;
+	box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+	padding-bottom: 32px;
+}
+
+input {
+	/* line-height: 30px; */
+	padding: 10px;
+	border: rgb(228, 228, 228) solid 1px;
+}
+
+[type="submit"] {
+	background: orangered;
+	color: white;
+}
+
+/* ========== wrapper ========= */
+.wrapper {
+	/* background: rgb(164, 164, 173); */
+	min-height: 100vh;
+}
+
+/* ========== global message ========= */
+.global-message {
+	background: rgb(130, 139, 167);
+	padding: 10px 0;
+}
+
+.global-content {
+	display: flex;
+	justify-content: space-between;
+	/* font-size: 14px; */
+}
+
+.social > i {
+	margin-right: 10px;
+}
+
+/* ========== Top nav bar ========= */
+.nav-bar {
+	background: rgb(227, 227, 228);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+.menu ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.menu ul li {
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.menu ul li:hover {
+	color: rgb(113, 142, 228);
+}
+
+.logo {
+	font-family: "Lobster", cursive;
+}
+h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: orangered;
+}
+
+/* ========== Hero section ========= */
+.hero {
+	width: 100%;
+	min-height: 80vh;
+	background: url(/assets/hero-img.jpg) no-repeat center center;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-content {
+	background: #000;
+	opacity: 0.7;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* ========== latest post section ========= */
+.latest {
+	display: flex;
+	flex-direction: row;
+	margin-top: 32px;
+}
+
+.latest section {
+	width: 66%;
+}
+.latest aside {
+	width: 33%;
+	background: rgba(255, 68, 0, 0.089);
+}
+
+.post-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.post-content img {
+	width: 180px;
+	border: rgb(192, 191, 191) 3px solid;
+	border-radius: 5px;
+	box-shadow: -10px 10px 15px 5px rgba(138, 138, 138, 0.678);
+}
+
+.info {
+	margin: 0 20px;
+}
+.readMore,
+.btn-card {
+	background: orangered;
+	font-size: 18px;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+.readMore :hover {
+	cursor: pointer;
+}
+
+.btn {
+	display: flex;
+	justify-content: flex-end;
+}
+
+article {
+	margin-top: 48px;
+}
+
+/* ========== side bar ========= */
+aside {
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+aside ul {
+	font-weight: bold;
+}
+.by-date {
+	margin-bottom: 80px;
+}
+
+/* ========= Recommendation section ========= */
+
+.rec {
+	background-color: rgba(251, 126, 80, 0.123);
+	padding: 100px 0;
+	margin-top: 32px;
+}
+.rec-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* ======== subscribe section ========= */
+.subscribe {
+	padding: 50px 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* ========= footer ========= */
+footer {
+	background: black;
+	height: 100px;
+	color: wheat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	margin-top: 32px;
+}
+
+
+.ham,
+.time {
+	display: none;
+}
+/* media query */
+
+/* min-width or max-width */
+
+@media (max-width: 1080px) {
+	.latest {
+		display: flex;
+		flex-direction: column;
+		margin-top: 32px;
+
+		.latest section {
+			width: 100%;
+		}
+		.latest aside {
+			width: 100%;
+	}
+	.aside {
+		margin-top: 32px;
+	}
+}
+@media (max-width: 768px) {
+
+	nav {
+		padding: 22px 0;
+	}
+	.ham {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.rec-card {
+		display: flex;
+		flex-direction: column;
+}
+
+
+@media (max-width: 576px) {
+	.post-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.post-content img {
+		width: 100%;
+		margin-bottom: 32px;
+	
+	}
+	
+	.rec-card {
+		display: flex;
+		flex-direction: column;
+		
+	}
+}
